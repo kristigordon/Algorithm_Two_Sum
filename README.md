@@ -1,3 +1,6 @@
+![image](https://user-images.githubusercontent.com/66803124/119274008-9bfc8800-bbc2-11eb-836a-1a18b9a831d8.png)
+
+
 # Algorithm Two Sum
 
 The Two Number Sum coding question might be one of the very first coding questions you will ever do. 
@@ -49,5 +52,7 @@ def two_sum_brute_force(arr, target):
 Optimal space and time complexity is O(n) Time and O(n) Space - where n is the length of the array
 
 There are many other options to solve this problem such as using a Binary Search or a Hash Table.
+
 Python Instructor, Robin Andrews, goes in depth through these in his article here:
+
 https://www.codementor.io/@info658/classic-python-interview-question-the-two-sum-problem-1aajub9joq
