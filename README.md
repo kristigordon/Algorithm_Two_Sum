@@ -58,7 +58,7 @@ Python Instructor, Robin Andrews, goes in depth through these in his article her
 https://www.codementor.io/@info658/classic-python-interview-question-the-two-sum-problem-1aajub9joq
 
 Another Example:
-
+```
 class Solution(object):
     def twoSum(self, nums, target):
         for index in range(len(nums)):
@@ -67,7 +67,8 @@ class Solution(object):
                 twoSum = nums[index] + nums[i]
                 print(twoSum)
             print()
-
+```
+```
 Your input
 [2,7,11,15]
 9
@@ -92,9 +93,12 @@ Output
 Diff
 Expected
 [0,1]
-
+```
+```
 if twoSum == target:
                     print(index, i)
+```
+```
 Your input
 [2,7,11,15]
 9
@@ -114,7 +118,9 @@ Output
 Diff
 Expected
 [0,1]
-
+```
+# Final Solution:
+```
 class Solution(object):
     def twoSum(self, nums, target):
         for index in range(len(nums)):
@@ -122,6 +128,8 @@ class Solution(object):
                 twoSum = nums[index] + nums[i]
                 if twoSum == target:
                     return index, i
+```
+```
 Accepted
 Runtime: 24 ms
 Your input
@@ -132,22 +140,20 @@ Output
 Diff
 Expected
 [0,1]
-
+```
 MORE OPTIMIZED SOLUTION:
-So, if we fix one of the numbers, say
-x
-, we have to scan the entire array to find the next number
-y
-which is
-value - x
-where value is the input parameter. Can we change our array somehow so that this search becomes faster?
+So, if we fix one of the numbers, say x, we have to scan the entire array to find the next number y
+which is value - x where value is the input parameter. Can we change our array somehow so that this search becomes faster?
 
+```
 class Solution(object):
     def twoSum(self, nums, target):
         for index in range(len(nums)):
             newTarget = target - nums[index]
             if newTarget in nums:
                 print(newTarget)
+```
+```
 Your input
 [2,7,11,15]
 9
@@ -175,14 +181,16 @@ Output
 Diff
 Expected
 [0,1]
-
-
+```
+```
 class Solution(object):
     def twoSum(self, nums, target):
         for index in range(len(nums)):
             newTarget = target - nums[index]
             if newTarget in nums:
                 return index, nums.index(newTarget)
+```
+```
 Accepted
 Runtime: 16 ms
 Your input
@@ -193,7 +201,7 @@ Output
 Diff
 Expected
 [0,1]
-
+```
 Complexity Analysis
 •	Time complexity : O(n^2)O(n2). For each element, we try to find its complement by looping through the rest of array which takes O(n)O(n) time. Therefore, the time complexity is O(n^2)O(n2).
 •	Space complexity : O(1)O(1).
