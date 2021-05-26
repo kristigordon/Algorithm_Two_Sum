@@ -3,12 +3,11 @@
 
 # Algorithm Two Sum
 
-The Two Number Sum coding question might be one of the very first coding questions you will ever do. 
+Whether you're using LeetCode, AlgoExpert, or just my site, the Two Number Sum coding question might be one of the very first coding questions you will ever do. This question takes you beyond the basics and introduces some logic and Big O Notation. If you haven't read my article explaining Big O Notation, you can definitely continue through this article. I'll link the deep dive so you can then directly apply what you learn here.  
 
+Well. Let's get into it. In this problem, we are taking an array of intergers, and trying to see what combimation equals the given target sum.
 
-In this problem, we are taking an array of intergers, and trying to see what combimation equals the given target sum.
-
-We then need to return these integers in any order.
+We will then need to return these integers in any order.
 
 In the event where there aren't two numbers that when summed equal the target number, return an empty array. 
 
@@ -17,7 +16,7 @@ An interger cannot be added to itself and there will be a maximum of one pair th
 
 For example:
 
-the input [1, 2, 3], 4
+the input [1, 2, 3],  with a target of 4
 
 should give the output (0, 2)
 
@@ -62,7 +61,6 @@ Another Example:
 class Solution(object):
     def twoSum(self, nums, target):
         for index in range(len(nums)):
-            print(index)
             for i in range(index + 1, len(nums)):
                 twoSum = nums[index] + nums[i]
                 print(twoSum)
@@ -72,27 +70,23 @@ class Solution(object):
 Your input
 [2,7,11,15]
 9
-stdout
-0
-9
-13
-17
-()
-1
-18
-22
-()
-2
-26
-()
-3
-()
 
-Output
-[]
-Diff
-Expected
-[0,1]
+You can see what is happening when we print:
+
+0 (Starting at index 0)
+9 (Add index 0 and 1 which is 2 and 7 = 9)
+13 (Add index 0 and 2 which is 2 and 11 = 13)
+17 (Add index 0 and 3 which is 2 and 15 = 17)
+()
+1 (Now moving onto index 1)
+18 (Add index 1 and 2 which is 7 and 11 = 18)
+22 (Add index 1 and 3 which is 7 and 15 = 22)
+()
+2 (Now moving onto index 2)
+26 (Add index 2 and 3 which is 11 and 15 = 26)
+()
+3 (Now moving onto index 3, there is nothing left to add.)
+()
 ```
 ```
 if twoSum == target:
