@@ -36,27 +36,7 @@ The steps we will take to get started are                                       
 ```
 
 We can start this solution with a Brute Force option.
-```
-Brute force approach
-def two_sum_brute_force(arr, target):
-    length = len(arr)
-    for i in range(length - 1):
-        for j in range(1, length):
-            # print(i, j)
-            if arr[i] + arr[j] == target:
-                return i, j
-    return None
-```
 
-Optimal space and time complexity is O(n) Time and O(n) Space - where n is the length of the array
-
-There are many other options to solve this problem such as using a Binary Search or a Hash Table.
-
-Python Instructor, Robin Andrews, goes in depth through these in his article here:
-
-https://www.codementor.io/@info658/classic-python-interview-question-the-two-sum-problem-1aajub9joq
-
-Another Example:
 ```
 class Solution(object):
     def twoSum(self, nums, target):
@@ -154,13 +134,8 @@ Your input
 stdout
 7
 2
-
-Output
-[]
-Diff
-Expected
-[0,1]
-
+```
+```
 print(nums.index(newTarget))
 
 Your input
@@ -170,9 +145,6 @@ stdout
 1
 0
 
-Output
-[]
-Diff
 Expected
 [0,1]
 ```
@@ -184,20 +156,48 @@ class Solution(object):
             if newTarget in nums:
                 return index, nums.index(newTarget)
 ```
+Our first Runtime was 24 ms!
+We are now at 16 ms. Great work!
 ```
 Accepted
 Runtime: 16 ms
 Your input
 [2,7,11,15]
 9
+
 Output
 [0,1]
-Diff
+
 Expected
 [0,1]
 ```
 Complexity Analysis
-•	Time complexity : O(n^2)O(n2). For each element, we try to find its complement by looping through the rest of array which takes O(n)O(n) time. Therefore, the time complexity is O(n^2)O(n2).
+•	Time complexity : O(n^2)O(n2). 
+For each element, we try to find its complement by looping through the rest of array which takes O(n)O(n) time. Therefore, the time complexity is O(n^2)O(n2).
 •	Space complexity : O(1)O(1).
 
+Another option for solving this problem is listed below. 
+```
+Brute force approach
+def two_sum_brute_force(arr, target):
+    length = len(arr)
+    for i in range(length - 1):
+        for j in range(1, length):
+            # print(i, j)
+            if arr[i] + arr[j] == target:
+                return i, j
+    return None
+```
 
+Optimal space and time complexity is O(n) Time and O(n) Space - where n is the length of the array
+
+There are many other options to solve this problem such as using a Binary Search or a Hash Table.
+
+Python Instructor, Robin Andrews, goes in depth through these in his article here:
+
+https://www.codementor.io/@info658/classic-python-interview-question-the-two-sum-problem-1aajub9joq
+
+
+Good luck!
+
+-Kris
