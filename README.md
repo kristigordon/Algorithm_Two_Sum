@@ -68,31 +68,12 @@ You can see what is happening when we print:
 3 (Now moving onto index 3, there is nothing left to add.)
 ()
 ```
-```
-if twoSum == target:
-                    print(index, i)
-```
-```
-Your input
-[2,7,11,15]
-9
-stdout
-0
-(0, 1)
-()
-1
-()
-2
-()
-3
-()
+This is good for laying down the foundation, but now we need to return a value. 
 
-Output
-[]
-Diff
-Expected
-[0,1]
-```
+If we take the index and i, we will have the position of the number pair.
+
+Let's return those now. 
+
 # Final Solution:
 ```
 class Solution(object):
@@ -115,9 +96,31 @@ Diff
 Expected
 [0,1]
 ```
-MORE OPTIMIZED SOLUTION:
-So, if we fix one of the numbers, say x, we have to scan the entire array to find the next number y
-which is value - x where value is the input parameter. Can we change our array somehow so that this search becomes faster?
+Great! Accepted. 
+
+We were able to complete the problem but that is not all your interviewer will expect from you. 
+
+There will usually be many ways to optimize a solution. Many interviewees will even start with a non-optimized solution so they can then move into a better solution and explain the differences in the logic. This allows you to show more mastery of the subject area. 
+
+Let's try a new approach. 
+
+# MORE OPTIMIZED SOLUTION:
+Up until this point we were taking one index and adding it to the other indexes in order, all while checking the sum against the target number. 
+
+Since we already know all the potential numbers and the target sum, there is a better way of solving this. 
+
+Let's take our first index 0 and minus it from the target number. 
+
+For our above example of:
+[2,7,11,15]
+9
+We would take 2 and minus it from the target of 9. This would give us 7. 
+
+Now we know the number that would complete the problem, we can search through the list for it. 
+
+Fortunately for us, the very next index is 7. Since there can only be one pair, we are done! 
+
+This is much more effecient than the original method and will involve significantly less steps. 
 
 ```
 class Solution(object):
