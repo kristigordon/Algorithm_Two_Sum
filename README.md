@@ -192,7 +192,7 @@ def two_sum_brute_force(arr, target):
     return None
 ```
 
-Optimal space and time complexity is O(n) Time and O(n) Space - where n is the length of the array
+Optimal space and time complexity is O(n) Time and O(n) Space - where n is the length of the array.
 
 There are many other options to solve this problem such as using a Binary Search or a Hash Table.
 
