@@ -30,7 +30,8 @@ The steps we will take to get started are                                       
 ```
 1. Take the array
 2. Iterate through it
-3. Take index 0 and add it seperately to each other item in the array while checking the sum against target number
+3. Take index 0 and add it seperately to each other item in the array while 
+        checking the sum against target number
 4. If equal, return the pair in the empty array that was created 
 5. If there is not a pair that when added equals the target number, retrun an empty array. 
 ```
